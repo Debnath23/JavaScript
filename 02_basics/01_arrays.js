@@ -2,13 +2,13 @@
 (All standard built-in copy operations with any JavaScript objects create shallow copies,
 rather than deep copies). */
 
-const myArray = new Array(0,1,2,3,4,5);
+const myArray = new Array(0, 1, 2, 3, 4, 5);
 console.log(myArray);
 
 myArray.push(5);
 console.log(myArray);
 
-myArray.pop()
+myArray.pop();
 console.log(myArray);
 
 myArray.unshift(6);
@@ -35,5 +35,5 @@ const myn1 = myArray.slice(1, 3);
 console.log("B: ", myArray);
 
 const myn2 = myArray.splice(1, 3); // Manupulating the array
-console.log("C: ",myArray);
+console.log("C: ", myArray);
 console.log(myn2);
