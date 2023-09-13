@@ -29,3 +29,9 @@ console.log(newDate.toLocaleString());
 console.log(newDate.getMonth() + 1);
 console.log(newDate.getDay());
 
+console.log(`${newDate.toLocaleString()} is the date.`);
+
+let newDate1 = newDate.toLocaleString('default',{
+    weekday: "long"
+});
+console.log(newDate1);
