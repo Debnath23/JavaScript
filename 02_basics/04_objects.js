@@ -52,3 +52,36 @@ console.log(Object.entries(user));
 
 console.log(user.hasOwnProperty('isLoggedIn'));
 console.log(user.hasOwnProperty('isLogged'));
+
+/* Object Destructure */
+
+const course = {
+    name: "JavaScript",
+    price: 999,
+    courseInstructor: "Hitesh"
+}
+
+const {courseInstructor: instructor} = course;
+// console.log(courseInstructor);
+console.log(instructor);
+
+/* Object Destructure In React */
+
+const navbar = ({company}) => {
+
+}
+navbar({company: "GOOGLE"});
+
+/* API Call from JSON 
+
+{
+    "name": "Debnath",
+    "courseName": "JavaScript",
+    "price": "free"
+}
+
+[
+    {},
+    {},
+    {}
+] */
