@@ -11,5 +11,20 @@
     </ul>
 </body>
 <script>
+    function addLanguage(lang){
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("TypeScript")
+
+    function addOptiLanguage(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("HTML")
+    addOptiLanguage("CSS")
 </script>
 </html>
