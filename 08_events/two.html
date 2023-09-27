@@ -20,14 +20,9 @@
         document.querySelector('#second').innerHTML = "Javascript";
     }
 
-    const sayDebnath2 = function(){
-        document.querySelector('#second').innerHTML = "Python";
-    }
-
     const changeMe = setTimeout(changeText, 5000);
     const changeRepeatedly = setInterval(() => {
         sayDebnath();
-        sayDebnath2();
     }, 4000);
 
     document.querySelector('#stop').addEventListener('click', function(){
