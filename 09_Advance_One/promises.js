@@ -88,3 +88,25 @@ async function consumePromiseFive(){
 
 consumePromiseFive()
 
+async function getAllUsers(){
+    try{
+        const responce = await fetch('https://api.github.com/users/Debnath23');
+        const data = await responce.json();
+        console.log(data);
+    }
+    catch(error){
+        console.log("E: ", error);
+    }
+}
+
+getAllUsers();
+
+
+fetch('https://api.github.com/users/Debnath23')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
