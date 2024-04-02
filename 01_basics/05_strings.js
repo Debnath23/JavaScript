@@ -3,7 +3,7 @@ const repoCount = 10;
 
 console.log(name + " " + repoCount + " Value"); // Outdated
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // String manipolation
 
 const gameName = new String("Debnath"); //Another type of String declaration as Object.
 
