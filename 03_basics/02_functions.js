@@ -10,6 +10,8 @@ function calculateCartPrice2(val1, val2, ...num){
 
 console.log(calculateCartPrice2(100, 300, 500, 2000));
 
+//When you call calculateCartPrice2 with arguments 100, 300, 500, and 2000, it ignores the first two arguments (val1 and val2) and collects the rest into the array num. Then, it returns this array.
+
 const user = {
     name: "Debnath",
     age: 22
