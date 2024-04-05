@@ -45,6 +45,8 @@ function addOne(num){
     return num++
 }
 
+// The function addOne you've declared is a post-increment function. In JavaScript, the post-increment operator (num++) increments the value of num, but it returns the original value before the increment. Therefore, in your function, return num++ will return the original value of num, not the incremented value.
+
 // console.log(addTwo(5)) {Hosting}
 const addTwo = function(num){ //Expression
     return (num + 2)
