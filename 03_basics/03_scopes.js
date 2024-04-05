@@ -48,6 +48,11 @@ function addOne(num){
 // The function addOne you've declared is a post-increment function. In JavaScript, the post-increment operator (num++) increments the value of num, but it returns the original value before the increment. Therefore, in your function, return num++ will return the original value of num, not the incremented value.
 
 // console.log(addTwo(5)) {Hosting}
+
+// In JavaScript, function declarations are hoisted to the top of their scope, which means you can use the function before it's declared. However, function expressions (such as the one you're using with const addTwo) are not hoisted in the same way.
+
+// The problem is that when the console.log(addTwo(5)); line is executed, addTwo is still undefined because it's a constant declared using a function expression, and function expressions are not hoisted like function declarations.
+
 const addTwo = function(num){ //Expression
     return (num + 2)
 }
