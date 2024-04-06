@@ -1,36 +1,32 @@
-const form = document.querySelector('form')
+const form = document.querySelector("form");
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-  const height = parseInt(document.querySelector('#height').value)
-  const weight = parseInt(document.querySelector('#weight').value)
-  const results = document.querySelector('#results')
+      const height = parseInt(document.querySelector("#height").value);
+      const weight = parseInt(document.querySelector("#weight").value);
+      const results = document.querySelector("#results");
 
-  if(height === '' || height < 0 || isNaN(height))
-  {
-    results.innerHTML = `Please give a valid height ${height}`;
-  }
-  else if(weight === '' || weight < 0 || isNaN(weight))
-  {
-    results.innerHTML = `Please give a valid weight ${weight}`;
-  }
-  else
-  {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    results.innerHTML = `<span>BMI: ${bmi}</span>`;
+      if (height === "" || height < 0 || isNaN(height)) {
+        results.innerHTML = `Please give a valid height ${height}`;
+      } else if (weight === "" || weight < 0 || isNaN(weight)) {
+        results.innerHTML = `Please give a valid weight ${weight}`;
+      } else {
+        const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+        results.innerHTML = `<span>BMI: ${bmi}</span>`;
 
-    if(bmi < 18.6)
-    {
-      results.innerHTML = `<span>${bmi} is Under Weight</span>`
-    }
-    else if(bmi >= 18.6 && bmi <= 24.9)
-    {
-      results.innerHTML = `<span>${bmi} is Normal Range</span>`
-    }
-    else
-    {
-      results.innerHTML = `<span>${bmi} is Over Weight</span>`
-    }
-  } 
-});
+        function showMessage(message){
+            const p = document.createElement('p')
+            p.appendChild(document.createTextNode(message))
+            document.querySelector('.result').appendChild(p)
+        }
+
+        if (bmi < 18.6) {
+            showMessage(`${bmi} is Under Weight`)
+        } else if (bmi >= 18.6 && bmi <= 24.9) {
+            showMessage(`${bmi} is Normal Range`)
+        } else {
+            showMessage(`${bmi} is Over Weight`)
+        }
+      }
+    });
