@@ -12,7 +12,7 @@
 Object literal
 
 - Constructor function
-- Prototyps
+- Prototypes
 - classes
 - Instances (new, this)
 
