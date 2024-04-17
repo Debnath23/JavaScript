@@ -1,5 +1,5 @@
 # JavaScript
-A code repository for JavaScript
+A repository for JavaScript
 
 ## Difference between normal function and arrow function
 ### 1. No arguments object in arrow functions
