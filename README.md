@@ -126,3 +126,20 @@ A repository for JavaScript
 ### init();
 
 ### init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, displayName() can access the variable name declared in the parent function, init().
+
+## Promise:
+
+### The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+
+### A Promise is in one of these states:
+### 1. pending: initial state, neither fulfilled nor rejected.
+### 2. fulfilled: meaning that the operation was completed successfully.
+### 3. rejected: meaning that the operation failed.
+
+## JavaScript is both synchronous and asynchronous
+
+### 1. Synchronous: JavaScript executes code line by line, in the order it appears in the script. Synchronous operations block further execution until the current operation is completed. For example, if you have a series of synchronous function calls, each one will be executed in sequence, and the next line of code won't be executed until the current line finishes executing.
+
+### 2. Asynchronous: JavaScript also supports asynchronous operations, where certain tasks can be executed independently of the main execution thread. Asynchronous operations don't block the execution of subsequent code. Common examples of asynchronous operations in JavaScript include fetching data from a server, reading files from disk, or waiting for user input. Promises, callbacks, and async/await are commonly used mechanisms for handling asynchronous operations in JavaScript.
+
+### JavaScript's asynchronous nature is particularly useful for tasks that would otherwise cause the application to freeze or become unresponsive, such as network requests or heavy computations. By leveraging asynchronous programming, JavaScript can handle these tasks efficiently while allowing the user interface to remain interactive.
