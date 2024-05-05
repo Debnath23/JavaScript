@@ -13,46 +13,41 @@ A repository for JavaScript
 ## Hoisting
 #### Hoisting is a concept where a variable or function is lifted to the top of its global or local scope before the whole code is executed. This makes it possible for such a variable/function to be accessed before initialization. Here's a function example:
 
-printName()
+### printName()
+### console.log("hello")
+### function printName() {
+###  console.log("i am dillion")
+### }
+### // i am dillion
+### // hello
 
-console.log("hello")
+### As you can see here, we called printName before it was actually declared in the code. But we don't get any errors. printName() is executed (logging "i am dillion" to the console) before console.log("hello").
 
-function printName() {
-  console.log("i am dillion")
-}
+### What happens here is hoisting.
 
-// i am dillion
-// hello
+### The printName function is raised to the top of the global scope (the scope it is declared in) before the whole code is executed, thereby making it possible to execute the function earlier.
 
-As you can see here, we called printName before it was actually declared in the code. But we don't get any errors. printName() is executed (logging "i am dillion" to the console) before console.log("hello").
+### But not all kinds of functions can be accessed before initialization. All functions and variables in JavaScript are hoisted, but only declared functions can be accessed before initialization.
 
-What happens here is hoisting.
+### printName()
+### console.log("hello")
 
-The printName function is raised to the top of the global scope (the scope it is declared in) before the whole code is executed, thereby making it possible to execute the function earlier.
+### var printName = () => {
+###  console.log("i am dillion")
+### }
+### // TypeError: printName is not a function
 
-But not all kinds of functions can be accessed before initialization. All functions and variables in JavaScript are hoisted, but only declared functions can be accessed before initialization.
-
-printName()
-
-console.log("hello")
-
-var printName = () => {
-  console.log("i am dillion")
-}
-
-// TypeError: printName is not a function
-
-Here, we have declared the printName variable with var. The error we get now is TypeError: printName is not a function. The reason for this is that variables declared with var are hoisted and accessible, but they have a default value of undefined. So attempting to access printName before the line it was initialized with the function expression is interpreted as undefined(), and as you know, "undefined is not a function".
+### Here, we have declared the printName variable with var. The error we get now is TypeError: printName is not a function. The reason for this is that variables declared with var are hoisted and accessible, but they have a default value of undefined. So attempting to access printName before the line it was initialized with the function expression is interpreted as undefined(), and as you know, "undefined is not a function".
 
 
 ## Hoisting in JavaScript with let and const – and How it Differs from var
-#### https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/
+### https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/
 
-const printHello = () => {
-  console.log("hello")
-}
+### const printHello = () => {
+###  console.log("hello")
+### }
 
-printName is not a declared function. It is a variable, declared with const which is assigned a function expression. Variables declared with let and const are hoisted, but they cannot be accessed before the line they are initialized
+### printName is not a declared function. It is a variable, declared with const which is assigned a function expression. Variables declared with let and const are hoisted, but they cannot be accessed before the line they are initialized
 
 
 ## Constructor:
@@ -115,3 +110,19 @@ printName is not a declared function. It is a variable, declared with const whic
 ### 2. Points newInstance's [[Prototype]] to the constructor function's prototype property, if the prototype is an Object. Otherwise, newInstance stays as a plain object with Object.prototype as its [[Prototype]].
 ### 3. Executes the constructor function with the given arguments, binding newInstance as the this context (i.e. all references to this in the constructor function now refer to newInstance).
 ### 4. If the constructor function returns a non-primitive, this return value becomes the result of the whole new expression. Otherwise, if the constructor function doesn't return anything or returns a primitive, newInstance is returned instead. (Normally constructors don't return a value, but they can choose to do so to override the normal object creation process.)
+
+
+## Closures: 
+### A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+### function init() {
+###  var name = "Mozilla"; // name is a local variable created by init
+###  function displayName() {
+###   // displayName() is the inner function, that forms the closure
+###    console.log(name); // use variable declared in the parent function
+###  }
+###  displayName();
+### }
+### init();
+
+### init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, displayName() can access the variable name declared in the parent function, init().
