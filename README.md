@@ -157,3 +157,34 @@ A repository for JavaScript
 ### A form is submitted.
 ### A video is played, paused, or ends.
 ### An error occurs.
+
+## Iterative methods:
+### Many array methods take a callback function as an argument. The callback function is called sequentially and at most once for each element in the array, and the return value of the callback function is used to determine the return value of the method.
+
+## Higher Order Function: 
+### A higher order function is a function that takes one or more functions as arguments, or returns a function as its result.
+
+### 1. map(): The map() method is an iterative method. It calls a provided callbackFn function once for each element in an array and constructs a new array from the results. callbackFn is invoked only for array indexes which have assigned values. It is not invoked for empty slots in sparse arrays.
+
+### 2. filter(): The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. The filter() method is an iterative method. It calls a provided callbackFn function once for each element in an array, and constructs a new array of all the values for which callbackFn returns a truthy value. Array elements which do not pass the callbackFn test are not included in the new array.
+
+### 3. reduce(): The reduce() method is an iterative method. It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value. Every time, the return value of callbackFn is passed into callbackFn again on next invocation as accumulator. The final value of accumulator (which is the value returned from callbackFn on the final iteration of the array) becomes the return value of reduce(). 
+
+### onst array1 = [1, 2, 3, 4];
+### // 0 + 1 + 2 + 3 + 4
+### const initialValue = 0;
+### const sumWithInitial = array1.reduce(
+###  (accumulator, currentValue) => accumulator + currentValue,
+###  initialValue,
+### );
+### console.log(sumWithInitial);
+### // Expected output: 10
+
+## slice():
+### The slice() method of Array instances returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+## setTimeout():
+### The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+
+### setTimeout(code)
+### setTimeout(code, delay)
