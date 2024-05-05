@@ -143,3 +143,17 @@ A repository for JavaScript
 ### 2. Asynchronous: JavaScript also supports asynchronous operations, where certain tasks can be executed independently of the main execution thread. Asynchronous operations don't block the execution of subsequent code. Common examples of asynchronous operations in JavaScript include fetching data from a server, reading files from disk, or waiting for user input. Promises, callbacks, and async/await are commonly used mechanisms for handling asynchronous operations in JavaScript.
 
 ### JavaScript's asynchronous nature is particularly useful for tasks that would otherwise cause the application to freeze or become unresponsive, such as network requests or heavy computations. By leveraging asynchronous programming, JavaScript can handle these tasks efficiently while allowing the user interface to remain interactive.
+
+
+## Event:
+### Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur.
+
+### For example:
+
+### The user selects, clicks, or hovers the cursor over a certain element.
+### The user chooses a key on the keyboard.
+### The user resizes or closes the browser window.
+### A web page finishes loading.
+### A form is submitted.
+### A video is played, paused, or ends.
+### An error occurs.
